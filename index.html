@@ -87,10 +87,9 @@
       min-height: 100vh; position: relative;
       display: flex; align-items: center; overflow: hidden;
       background:
-        radial-gradient(120% 78% at 50% 14%, rgba(192,38,211,0.30) 0%, rgba(255,30,140,0.14) 32%, rgba(11,11,13,0) 62%),
-        linear-gradient(180deg, #18081B 0%, #0F0710 42%, #0B0B0D 100%),
-        url('images/hero-aerial.jpg') center 38% / cover no-repeat;
-      background-blend-mode: normal, normal, luminosity;
+        radial-gradient(120% 78% at 50% 14%, rgba(192,38,211,0.22) 0%, rgba(255,30,140,0.10) 32%, rgba(11,11,13,0) 62%),
+        linear-gradient(180deg, rgba(11,11,13,0.45) 0%, rgba(11,11,13,0.10) 42%, rgba(11,11,13,0.70) 100%),
+        url('images/invites (6).jpg') center 50% / cover no-repeat;
     }
     .hero-veil {
       position: absolute; inset: 0; z-index: 1;
@@ -171,12 +170,14 @@
     .feat-body .feat-meta { font-size: 0.78rem; color: var(--mut2); }
 
     /* ── GALLERY ── */
-    .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-top: 56px; }
-    .gallery-item { aspect-ratio: 1; border-radius: 6px; overflow: hidden; background-size: cover; background-position: center; }
-    .gallery-item.g1 { background-image: url('images/rooftop-set.jpg'); }
-    .gallery-item.g2 { background-image: url('images/hero-aerial.jpg'); }
-    .gallery-item.g3 { background-image: url('images/sea-villa.jpg'); }
-    .gallery-item.g4 { background-image: url('images/mountain-villa.jpg'); }
+    .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); grid-template-rows: 260px 260px; gap: 8px; margin-top: 56px; }
+    .gallery-item { border-radius: 6px; overflow: hidden; background-size: cover; background-position: center; }
+    .gallery-item.g1 { background-image: url('images/invites (1).jpg'); background-position: center 40%; }
+    .gallery-item.g2 { background-image: url('images/invites (2).jpg'); background-position: center 30%; }
+    .gallery-item.g3 { background-image: url('images/invites (3).jpg'); background-position: center 40%; }
+    .gallery-item.g4 { background-image: url('images/invites (4).jpg'); background-position: center 60%; }
+    .gallery-item.g5 { background-image: url('images/invites (5).jpg'); background-position: center 40%; grid-column: span 2; }
+    .gallery-item.g6 { background-image: url('images/invites (6).jpg'); background-position: center 50%; grid-column: span 2; }
 
     /* ── CONTACT ── */
     .contact-wrap { background: var(--ink2); padding: 100px 28px; text-align: center; position: relative; overflow: hidden; }
@@ -424,6 +425,8 @@
       <div class="gallery-item g2 fu d1"></div>
       <div class="gallery-item g3 fu d2"></div>
       <div class="gallery-item g4 fu d3"></div>
+      <div class="gallery-item g5 fu"></div>
+      <div class="gallery-item g6 fu d1"></div>
     </div>
   </div>
 </section>
