@@ -158,6 +158,7 @@
 
     /* ── FEATURED ── */
     .feat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 56px; }
+    .feat-card-link { text-decoration: none; display: block; }
     .feat-card {
       border: 1px solid var(--border); border-radius: 10px; overflow: hidden;
       background: var(--ink2); transition: border-color 0.2s, transform 0.2s;
@@ -382,25 +383,31 @@
     <h2 class="fu d1">The films.</h2>
     <p class="concept-lead fu d2">No episodes are live yet — the first sets are in production. Check back, or follow along for the release.</p>
     <div class="feat-grid">
-      <div class="feat-card fu">
+      <a href="eclipse.html" class="feat-card-link fu">
+        <div class="feat-card" style="border-color:rgba(245,194,90,0.45);background:linear-gradient(160deg,rgba(245,194,90,0.09),var(--ink2));">
+          <div class="feat-img" style="background:linear-gradient(135deg,rgba(245,158,11,0.22),rgba(192,38,211,0.18)),url('images/eclipse-party.jpg') center 20%/cover;position:relative;">
+            <span style="position:absolute;top:14px;left:14px;font-size:0.62rem;letter-spacing:0.14em;text-transform:uppercase;color:#F5C25A;background:rgba(11,11,13,0.7);padding:4px 11px;border-radius:20px;font-weight:600;">12 August · Free</span>
+          </div>
+          <div class="feat-body">
+            <div class="feat-name">Solar Eclipse Rooftop Party</div>
+            <div class="feat-meta" style="color:var(--gold);">The Sea House · 5pm–11pm · 50 guests max</div>
+            <div style="margin-top:10px;font-size:0.8rem;color:var(--mut);">Progressive house &amp; trance under the eclipse. Bring your own drinks — BBQ on site.</div>
+            <div style="margin-top:14px;font-size:0.76rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--pink);">Request guest list →</div>
+          </div>
+        </div>
+      </a>
+      <div class="feat-card fu d1">
         <div class="feat-img"><span>Coming Soon</span></div>
         <div class="feat-body">
           <div class="feat-name">Episode 01</div>
           <div class="feat-meta">The Sea House · TBA</div>
         </div>
       </div>
-      <div class="feat-card fu d1">
+      <div class="feat-card fu d2">
         <div class="feat-img"><span>Coming Soon</span></div>
         <div class="feat-body">
           <div class="feat-name">Episode 02</div>
           <div class="feat-meta">The Mountain House · TBA</div>
-        </div>
-      </div>
-      <div class="feat-card fu d2">
-        <div class="feat-img"><span>Coming Soon</span></div>
-        <div class="feat-body">
-          <div class="feat-name">Episode 03</div>
-          <div class="feat-meta">The Sea House · TBA</div>
         </div>
       </div>
     </div>
