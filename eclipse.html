@@ -599,6 +599,59 @@
   </div>
 </div>
 
+<!-- ── INSTAGRAM MODAL ── -->
+<div id="igModal" style="
+  display:none; position:fixed; inset:0; z-index:200;
+  background:rgba(11,11,13,0.82); backdrop-filter:blur(8px);
+  align-items:center; justify-content:center; padding:24px;
+">
+  <div style="
+    background:linear-gradient(160deg,#1C181F,#0F0B12);
+    border:1px solid rgba(255,30,140,0.35); border-radius:16px;
+    padding:44px 40px; max-width:400px; width:100%; text-align:center;
+    position:relative; box-shadow:0 32px 80px rgba(0,0,0,0.6);
+  ">
+    <button id="igClose" aria-label="Close" style="
+      position:absolute; top:16px; right:16px;
+      background:none; border:none; color:rgba(251,250,247,0.4);
+      font-size:1.3rem; cursor:pointer; line-height:1; padding:4px;
+      transition:color 0.2s;
+    " onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(251,250,247,0.4)'">&times;</button>
+
+    <!-- Instagram icon -->
+    <div style="
+      width:64px; height:64px; border-radius:16px; margin:0 auto 22px;
+      background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);
+      display:flex; align-items:center; justify-content:center;
+    ">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+        <rect x="3" y="3" width="18" height="18" rx="5" stroke="white" stroke-width="1.8"/>
+        <circle cx="12" cy="12" r="4" stroke="white" stroke-width="1.8"/>
+        <circle cx="17.5" cy="6.5" r="1.3" fill="white"/>
+      </svg>
+    </div>
+
+    <p style="font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--pink);font-weight:600;margin-bottom:10px;">Balearic Beats</p>
+    <h3 style="font-family:'Playfair Display',serif;font-size:1.5rem;color:#FBFAF7;margin-bottom:10px;line-height:1.25;">Follow us<br>on Instagram</h3>
+    <p style="font-size:0.86rem;color:rgba(251,250,247,0.55);margin-bottom:30px;line-height:1.65;">Stay updated on the Solar Eclipse Party, guest list announcements, and everything Balearic Beats.</p>
+
+    <a href="https://www.instagram.com/balearicbeatsevents/" target="_blank" rel="noopener" id="igFollow" style="
+      display:block; background:linear-gradient(135deg,#e6683c,#dc2743,#cc2366);
+      color:white; text-decoration:none; padding:15px 28px; border-radius:30px;
+      font-size:0.82rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase;
+      transition:opacity 0.2s, transform 0.15s; margin-bottom:14px;
+    " onmouseover="this.style.opacity='0.88';this.style.transform='translateY(-1px)'" onmouseout="this.style.opacity='1';this.style.transform='translateY(0)'">
+      Follow @balearicbeatsevents
+    </a>
+    <button id="igDismiss" style="
+      background:none; border:none; color:rgba(251,250,247,0.35);
+      font-size:0.76rem; cursor:pointer; padding:4px; transition:color 0.2s;
+    " onmouseover="this.style.color='rgba(251,250,247,0.7)'" onmouseout="this.style.color='rgba(251,250,247,0.35)'">
+      No thanks
+    </button>
+  </div>
+</div>
+
 <!-- ── FOOTER ── -->
 <footer>
   <div class="container">
@@ -631,6 +684,22 @@
       if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
     });
   });
+
+  // Instagram modal — show after 6s, once per session
+  (function () {
+    const modal = document.getElementById('igModal');
+    const close = () => {
+      modal.style.display = 'none';
+      sessionStorage.setItem('ig_dismissed', '1');
+    };
+    document.getElementById('igClose').addEventListener('click', close);
+    document.getElementById('igDismiss').addEventListener('click', close);
+    document.getElementById('igFollow').addEventListener('click', close);
+    modal.addEventListener('click', e => { if (e.target === modal) close(); });
+    if (!sessionStorage.getItem('ig_dismissed')) {
+      setTimeout(() => { modal.style.display = 'flex'; }, 6000);
+    }
+  })();
 
   // Animate capacity bar when it enters view
   const fill = document.getElementById('capacityFill');
