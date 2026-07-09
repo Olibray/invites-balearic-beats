@@ -156,7 +156,7 @@
     .step p { color: var(--mut); font-size: 0.9rem; max-width: 620px; }
 
     /* ── FEATURED ── */
-    .feat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 56px; }
+    .feat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 56px; }
     .feat-card-link { text-decoration: none; display: block; }
     .feat-card {
       border: 1px solid var(--border); border-radius: 10px; overflow: hidden;
@@ -382,7 +382,7 @@
   <div class="container">
     <div class="eyebrow fu">Featured &amp; Upcoming</div>
     <h2 class="fu d1">The films.</h2>
-    <p class="concept-lead fu d2">Episode 01 is confirmed with Darren Shambhala at The Sea House — filming soon. Episode 02 is in production. Check back, or follow along for the release.</p>
+    <p class="concept-lead fu d2">Episode 01 is confirmed with Darren Shambhala at The Sea House. Episode 02 is confirmed with Paul Thomas (Underground Live Forever). Episode 03 is confirmed with Darren Tate. Filming soon — check back, or follow along for the release.</p>
     <div class="feat-grid">
       <a href="https://eclipse.balearicbeats.es/" target="_blank" rel="noopener" class="feat-card-link fu">
         <div class="feat-card" style="border-color:rgba(245,194,90,0.45);background:linear-gradient(160deg,rgba(245,194,90,0.09),var(--ink2));">
@@ -407,10 +407,21 @@
         </div>
       </div>
       <div class="feat-card fu d2">
-        <div class="feat-img"><span>Coming Soon</span></div>
+        <div class="feat-img" style="background:linear-gradient(135deg,rgba(255,30,140,0.18),rgba(192,38,211,0.14)),url('images/paul-thomas.jpg') center 25%/cover;position:relative;">
+          <span style="position:absolute;top:14px;left:14px;font-size:0.62rem;letter-spacing:0.14em;text-transform:uppercase;color:#FBFAF7;background:rgba(11,11,13,0.7);padding:4px 11px;border-radius:20px;font-weight:600;">Coming Soon</span>
+        </div>
         <div class="feat-body">
-          <div class="feat-name">Episode 02</div>
-          <div class="feat-meta">The Mountain House · TBA</div>
+          <div class="feat-name">Episode 02 · Paul Thomas</div>
+          <div class="feat-meta">The Mountain House · Filming soon</div>
+        </div>
+      </div>
+      <div class="feat-card fu d3">
+        <div class="feat-img" style="background:linear-gradient(135deg,rgba(255,30,140,0.18),rgba(192,38,211,0.14)),url('images/darren-tate.jpg') center 25%/cover;position:relative;">
+          <span style="position:absolute;top:14px;left:14px;font-size:0.62rem;letter-spacing:0.14em;text-transform:uppercase;color:#FBFAF7;background:rgba(11,11,13,0.7);padding:4px 11px;border-radius:20px;font-weight:600;">Coming Soon</span>
+        </div>
+        <div class="feat-body">
+          <div class="feat-name">Episode 03 · Darren Tate</div>
+          <div class="feat-meta">Filming soon</div>
         </div>
       </div>
     </div>
