@@ -1,0 +1,11 @@
+{
+  "rewrites": [
+    {
+      "source": "/",
+      "has": [
+        { "type": "host", "value": "eclipse.balearicbeats.es" }
+      ],
+      "destination": "/eclipse.html"
+    }
+  ]
+}
