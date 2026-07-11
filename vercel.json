@@ -3,7 +3,7 @@
     {
       "source": "/",
       "has": [
-        { "type": "host", "value": "eclipse.balearicbeats.es" }
+        { "type": "header", "key": "host", "value": "eclipse.balearicbeats.es" }
       ],
       "destination": "/eclipse.html"
     }
